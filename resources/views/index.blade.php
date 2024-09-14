@@ -29,5 +29,5 @@
         <img src="./images/valorant.jpg" alt="Fourth Image" class="absolute inset-0 w-full h-full  opacity-0 transition-opacity duration-1000">
     </div>
 @endsection                                                                                          
-
+{{-- oyoyyoyoyoyoyoys --}}
     

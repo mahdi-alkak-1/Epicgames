@@ -15,7 +15,7 @@
             </a>
 
         </div>
-        {{--coming soon posts --}}
+       
         <div class=" coming-soon container mx-auto custom-shadow lg:grid grid-cols-4 space-y-6 bg-blue-900 rounded-lg ml-2 mr-2 pb-6">
             <div class="flex flex-col items-center justify-center  mt-6  ">
                 <img src="./images/fifa2025.jpg" alt="fifa" class="w-[250px] h-[250px] rounded-lg ">

@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/store';
 
     /**
      * Create a new controller instance.
@@ -46,6 +46,6 @@ class LoginController extends Controller
         $request->session()->regenerateToken();
 
         // Redirect to the homepage after logout
-        return redirect('/');
+        return redirect('/store');
     }
 }

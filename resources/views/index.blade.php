@@ -4,7 +4,7 @@
     <!--------- store and library ----->
     <div class="flex">
         @include('layouts.sidebar')
-        <div class=" container flex justify-between bg-white border border-slate-700 rounded-full w-[350px] h-[255px] md:w-1/3">
+        <div class=" container flex justify-between bg-black border border-slate-700 rounded-full w-[350px] h-[255px] md:w-1/3">
             <div class="container pt-5 pl-4 flex flex-col  font-bold ">
                 <span class=" text-[8px]">AVAILABLE NOW</span>
                 <p class="leading-tight">The Epic Games Store<br> is on mobile</p>

@@ -7,4 +7,789 @@
     box-shadow: 4px 4px 15px rgba(255, 247, 0, 0.684);
 }
 
+.custom-shadow1{
+    box-shadow: 4px 4px 15px rgba(17, 0, 255, 0.684);
+}
 
+
+/* Search Bar */
+.search-bar {
+    border: 1px solid #ccc;
+    border-right: none;
+    background-color: #f3f4f6;
+}
+
+.search-button {
+    border: 1px solid #ccc;
+    background-color: #fbbf24;
+}
+
+.search-button:hover {
+    background-color: #f59e0b;
+}
+
+/* Game Card */
+.game-card {
+    background-color: #1f2937;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+}
+
+.game-image {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.game-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.game-subtitle, .game-price {
+    font-size: 1rem;
+    color: #a1a1aa;
+    margin-bottom: 12px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 9999px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.details-button {
+    background-color: #fbbf24;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+    background-color: #f59e0b;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Custom Styles */
+body {
+    background-color: #1e293b;
+    color: #e2e8f0;
+}
+
+.container {
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid .game-card {
+    position: relative;
+}
+
+
+/*-----------------------------------------*/
+.retro {
+    font-family: 'Press Start 2P', cursive; /* Retro gaming font */
+    font-size: 50px;
+    color: #00f; /* Sonic’s iconic blue color */
+    letter-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px #fff, 4px 4px 0px #ff0, 6px 6px 0px #f00;
+}
+
+
+ /* FIFA specific style */
+ .fifa {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 70px;
+    color: #0032b1; /* FIFA green, representing the soccer field */
+    text-transform: uppercase; /* Makes the title all caps */
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 0 #fff, /* White shadow for depth */
+                 6px 6px 0 #000, /* Black shadow for the soccer ball effect */
+                 9px 9px 0 #ffcc00; /* Gold shadow for prestige */
+    position: relative;
+}
+
+/* Optional styling for a soccer ball effect (you can apply this if you'd like to further decorate FIFA posts) */
+.fifa::before {
+    content: '⚽'; /* Soccer ball icon */
+    font-size: 50px;
+    color: #000;
+    position: absolute;
+    left: -60px; /* Position soccer ball before the title */
+    top: 10px;
+    
+}
+
+.fifa::after {
+    content: '⚽'; /* Soccer ball icon */
+    font-size: 50px;
+    color: #000;
+    position: absolute;
+    right: -60px; /* Position soccer ball after the title */
+    top: 10px;
+}
+
+
+/* Call of Duty specific style */
+.cod {
+    font-family: 'Impact', sans-serif; /* Bold, strong font */
+    font-size: 80px;
+    color: #2e2e2e; /* Dark gray, almost black */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px #000, /* Black shadow for depth */
+                 -1px -1px 2px #6b6b6b; /* Light gray highlight for worn look */
+    position: relative;
+}
+
+/* Add rough, grunge-like effect */
+.cod::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -15px;    
+    right: -15px;
+    height: 5px;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8) 10px,
+        transparent 10px,
+        transparent 20px
+    ); /* Camouflage-like background stripe */
+}
+
+.cod::after {
+    content: '🪖'; /* Military helmet icon */
+    font-size: 50px;
+    color: #808080; /* Military gray */
+    position: absolute;
+    right: -60px;
+    top: -10px;
+}
+
+/* Optional: Bullet holes effect */
+.cod::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: radial-gradient(circle, transparent 10%, #2e2e2e 10%, #2e2e2e 20%, transparent 30%);
+    width: 20px;
+    height: 20px;
+}
+
+.cod::after {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 40px;
+    background: radial-gradient(circle, transparent 10%, #2e2e2e 10%, #2e2e2e 20%, transparent 30%);
+    width: 15px;
+    height: 15px;
+}
+
+
+/* Buy Button Style */
+.buy-button {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 20px;
+    padding: 15px 40px;
+    background-color: #4eff2b; /* Vivid red color */
+    color: #fff; /* White text */
+    border: 2px solid #2fff2b;
+    border-radius: 50px; /* Rounded button */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect */
+.buy-button:hover {
+    background-color: #fff;
+    color: #ff4b2b;
+    border-color: #ff4b2b;
+}
+
+/* Button click animation */
+.buy-button:active {
+    transform: scale(0.95);
+}
+
+/* Shine effect on hover */
+.buy-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.3)
+    );
+    transform: rotate(45deg);
+    transition: all 0.6s ease-in-out;
+    opacity: 0;
+}
+
+.buy-button:hover::before {
+    left: 150%;
+    opacity: 1;
+}
+
+/* Add a subtle shadow to lift the button */
+.buy-button {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Add a cart icon */
+.buy-button::after {
+    content: '🛒'; /* Shopping cart icon */
+    position: absolute;
+    right: 20px;
+    font-size: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+ /* Free Button Style */
+ .free-button {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 20px;
+    padding: 15px 40px;
+    background-color: #00d084; /* Bright green for a 'free' feel */
+    color: #fff; /* White text */
+    border: 2px solid #00d084;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect */
+.free-button:hover {
+    background-color: #fff;
+    color: #00d084;
+    border-color: #00d084;
+}
+
+/* Click animation */
+.free-button:active {
+    transform: scale(0.95);
+}
+
+/* Add glowing effect to emphasize that it’s free */
+.free-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 208, 132, 0.4); /* Greenish glow */
+    border-radius: 50px;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Glowing effect on hover */
+.free-button:hover::before {
+    box-shadow: 0 0 20px rgba(0, 208, 132, 0.7), 0 0 40px rgba(0, 208, 132, 0.7);
+}
+
+/* Add a subtle shadow */
+.free-button {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Add a gift icon */
+.free-button::after {
+    content: '🎁'; /* Gift icon for free */
+    position: absolute;
+    right: 20px;
+    font-size: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+ /* Coming Soon Button Style */
+ .coming-soon-button {
+    display: inline-block;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 20px;
+    padding: 15px 40px;
+    background-color: #ffcc00; /* Bright yellow for attention */
+    color: #333; /* Dark text for contrast */
+    border: 2px solid #ffcc00;
+    border-radius: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: default; /* No clickable effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect to make it more dynamic even if not functional */
+.coming-soon-button:hover {
+    background-color: #ffdd44;
+    border-color: #ffdd44;
+    color: #000;
+}
+
+/* Glowing effect to add excitement */
+.coming-soon-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 204, 0, 0.3); /* Yellow glow */
+    border-radius: 50px;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Glow on hover */
+.coming-soon-button:hover::before {
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.7), 0 0 30px rgba(255, 204, 0, 0.7);
+}
+
+/* Add a clock icon */
+.coming-soon-button::after {
+    content: '⏳'; /* Hourglass emoji to represent waiting */
+    position: absolute;
+    right: 20px;
+    font-size: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+  /* Back Button Style */
+  .back-button {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    padding: 12px 30px;
+    background-color: #3490dc; /* Blue color */
+    color: white;
+    border-radius: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #3490dc;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.back-button:hover {
+    background-color: white;
+    color: #3490dc;
+    border-color: #3490dc;
+}
+
+/* Button click animation */
+.back-button:active {
+    transform: scale(0.95);
+}
+
+/* Add a subtle shadow */
+.back-button {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+ /* Container Styling */
+ .container-b {
+    background-color: #1f2937; /* Dark background */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Fields */
+label {
+    color: #f3f4f6; /* Light label color */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+select, input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    background-color: #4b5563;
+    border: none;
+    border-radius: 8px;
+    color: #f3f4f6;
+    transition: all 0.3s ease;
+}
+
+select:focus, input:focus, textarea:focus {
+    outline: none;
+    background-color: #6b7280;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #4ade80; /* Green color for the button */
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #34d399;
+}
+
+.submit-btn:active {
+    transform: scale(0.95);
+}
+
+/* Validation Errors */
+.alert {
+    color: #ff6b6b;
+    background-color: #2d3748;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.alert ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.alert li {
+    text-align: left;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+.centered-form {
+    width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .centered-form {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.back-button {
+        display: inline-block;
+        background-color: #3490dc; /* Blue background */
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+.back-button:hover {
+        background-color: #2779bd; /* Darker blue on hover */
+}
+
+.back-button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+}
+
+.edit-button {
+    display: inline-block;
+    background-color: #f59e0b; /* Amber color */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.edit-button:hover {
+    background-color: #d97706; /* Darker amber on hover */
+}
+
+.edit-button:active {
+    transform: scale(0.95); /* Slight shrink on click */
+}
+
+
+
+ /* Success Message Styling */
+ .success-message {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #38a169;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none; /* Initially hidden */
+    opacity: 0;
+    transition: opacity 0.5s ease, top 0.5s ease;
+}
+
+.success-message.show {
+    display: block;
+    opacity: 1;
+    top: 20px; /* Slide down from the top */
+}
+
+
+.delete-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #e3342f; /* Red background */
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #cc1f1a; /* Darker red on hover */
+}
+
+.delete-button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+}
+
+.delete-button:disabled {
+    background-color: #e3342f;
+    opacity: 0.6;
+    cursor: not-allowed; /* Disable button styling */
+}
+
+.add-to-cart-button {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #e67e22;
+}
+
+/* Cart Page Styles ---------------------------------------------------------------------------------- */
+
+/* General Cart Container */
+.cart-container {
+    max-width: 1200px;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+}
+
+/* Individual Cart Item */
+.cart-item {
+    background-color: #292929;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cart-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Remove Button */
+.remove-btn {
+    background-color: #ff4d4f;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.remove-btn:hover {
+    background-color: #d9363e;
+}
+
+/* Cart Summary */
+.cart-summary {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #2c2c2c;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Checkout Button */
+.checkout-btn {
+    background-color: #28a745;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.checkout-btn:hover {
+    background-color: #218838;
+}
+
+/* Cart Summary Text */
+.cart-summary p, .cart-summary h2 {
+    color: #ffffff;
+}
+
+/* Hover Effects */
+.cart-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(120deg, #2b2b2b, #1a1a1a);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #ffffff;
+}
+
+/* Fonts and Text */
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+p, .text-white {
+    color: #e0e0e0;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-summary {
+        max-width: 100%;
+    }
+}
+/* Back to Store Button */
+.back-to-store-btn {
+    display: inline-block;
+    background-color: #4b5563; /* Gray color */
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.back-to-store-btn:hover {
+    background-color: #374151; /* Darker gray on hover */
+}
+
+/* Checkout Page Styles */
+.checkout-container {
+    max-width: 1200px;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+}
+
+/* Shipping and Payment Info */
+.shipping-info, .payment-info {
+    background-color: #292929;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Inputs */
+input {
+    background-color: #2c2c2c;
+    border: 1px solid #3a3a3a;
+    color: #fff;
+}
+
+input:focus {
+    outline: none;
+    border-color: #5f5f5f;
+}
+
+/* Submit Button */
+button {
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* General Styling */
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+p, .text-white {
+    color: #e0e0e0;
+}
+
+body {
+    background: linear-gradient(120deg, #2b2b2b, #1a1a1a);
+}

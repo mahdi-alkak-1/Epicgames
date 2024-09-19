@@ -15,4 +15,7 @@ class Post extends Model
     {
         return $this->belongsTo(Category::class);
     }
+    public function cartItems(){
+        return $this->hasMany(Cart::class);
+    }
 }

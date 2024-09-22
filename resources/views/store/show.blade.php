@@ -149,7 +149,7 @@
     </div>
 
     <!-- Game Title -->
-    <div class="container text-center mt-12">
+    <div class="container text-center mt-12 ">
         <h1>{{ $post->title }}</h1>
     </div>
 

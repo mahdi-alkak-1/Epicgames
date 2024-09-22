@@ -40,7 +40,7 @@
                         <div class="text-xl font-semibold">
                             Quantity: {{ $item->quantity }}
                         </div>
-    
+                        
                         <!-- Total Price -->
                         <div class="text-xl font-semibold">
                             Total: ${{ number_format($item->post->price * $item->quantity, 2) }}

@@ -6,85 +6,162 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     @vite('resources/css/app.css')
     @vite('resources/js/script.js')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.14/lottie.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');  
-        .gaming-bg {
-            background: url('/images/gaming-bg.jpg') no-repeat center center /cover;
-            background-attachment: fixed;
-        }
-        #popup-message {
-            transform: translateY(500%);
-            margin-left: 2rem;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px;
-            border-radius: 10px;
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            background: linear-gradient(135deg, #1f1c2c, #928DAB);
+            font-family: 'Roboto', sans-serif;
             color: white;
-            z-index: 50;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header img {
+            width: 100px;
+            cursor: pointer;
+        }
+
+        .search-bar-container {
+            flex-grow: 1;
+            margin-left: 20px;
+            position: relative;
+        }
+
+        .search-bar-container input {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            padding-left: 40px;
+            font-size: 16px;
+        }
+
+        .search-bar-container .ri-search-2-line {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #555;
+        }
+
+        /* User menu and cart icons */
+        .user-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-menu a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .user-menu a:hover {
+            color: #FFD700;
+        }
+
+        .user-menu .icon {
+            font-size: 25px;
+            color: white;
+        }
+
+        .user-menu .icon:hover {
+            color: #FFD700;
+        }
+
+        /* Cart button */
+        .cart-button {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .cart-button i {
+            font-size: 25px;
+            color: white;
+            margin-right: 10px;
+        }
+
+        .cart-button:hover {
+            color: #FFD700;
+        }
+
+        /* Cart counter bubble */
+        .cart-counter {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #FFD700;
+            color: black;
+            font-size: 12px;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-weight: bold;
         }
     </style>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Game Store</title>
 </head>
-<body class="font-serif gaming-bg">
-    <div class="flex items-center">
-        <!-- Logo -->
-        <img src="/images/logo(walppaper).png" class="w-20 h-20 md:w-64 md:h-64 ml-10 mt-5 md:ml-5 md:mt-1" alt="logo">
-        <a href="/" class="text-white ml-5 mt-2 md:ml-16 md:-mt-4 text-lg hover:text-cyan-500"><i class="ri-arrow-left-s-line"></i></a>
+<body>
 
-        <!-- Search Form (Common search bar across all pages) -->
-        <form action="{{ route('store.search') }}" method="GET" class="flex-grow">
-            <div class="relative flex items-center">
-                <i class="ri-search-2-line absolute ml-8 mt-2 md:ml-14 md:-mt-4 text-sm text-gray-600 pointer-events-none"></i>
-                <input class="px-8 py-1 ml-5 mt-2 md:-mt-4 md:ml-10 rounded-full md:w-96" 
-                       type="text" placeholder="Search for a game..." 
-                       name="search" value="{{ request()->query('search') }}">
-            </div>
-        </form>
+    <!-- Header -->
+    <div class="header">
+        <a href="/">
+            <img src="/images/logo(walppaper).png" alt="logo">
+        </a>
 
-        <!-- Cart/Login/Register -->
-        <div class="hidden md:flex h-16">
+        <!-- Search Bar -->
+        <div class="search-bar-container">
+            <i class="ri-search-2-line"></i>
+            <form action="{{ route('store.search') }}" method="GET">
+                <input type="text" name="search" placeholder="Search for games..." value="{{ request()->query('search') }}">
+            </form>
+        </div>
+
+        <!-- User Menu -->
+        <div class="user-menu">
+            <!-- Add Cart button here -->
             @if(Auth::check())
-                <div class="flex flex-col">
-                    <a href="/cart" class="text-white ml-80 mt-3 text-lg hover:text-yellow-500">Cart</a>
-                    <p class="absolute ml-80 -mt-6"><i class="ri-shopping-cart-line text-3xl -mt-4 text-white"></i></p>
-                </div>
-                <span class="text-white ml-14 md:-mt-9 border-l"></span>
-            @endif 
-            @if (Auth::check())
-                <div class="flex flex-col-reverse items-center justify-center ml-12 mb-2">
-                    <a href="/profile" class="text-white text-lg hover:text-yellow-500">{{ Auth::user()->name }}</a>
-                    <p class="absolute -mt-16"><i class="ri-user-line text-3xl text-white"></i></p>
-                </div>
-                <div class="flex flex-col-reverse items-center justify-center ml-12 mb-2">
-                    <a href="{{ route('logout') }}" class="text-white text-lg hover:text-yellow-500" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                    <p class="absolute -mt-16"><i class="ri-logout-box-line text-3xl text-white"></i></p>
-                </div>
+                <a href="/cart" class="cart-button">
+                    <i class="ri-shopping-cart-line"></i> Cart
+                    <!-- Optional: Show cart items count -->
+                     <!-- Assuming you're using a package like Laravel Shopping Cart -->
+                </a>
+                <a href="/profile">{{ Auth::user()->name }}</a>
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
             @else
-                <div class="flex flex-col-reverse items-center justify-center ml-12 mb-2">
-                    <a href="/login" class="text-white text-lg hover:text-yellow-500">Login</a>
-                    <p class="absolute -mt-16"><i class="ri-login-box-line text-3xl text-white"></i></p>
-                </div>
-                <div class="flex flex-col-reverse items-center ml-12 mb-5">
-                    <a href="/register" class="text-white text-lg hover:text-yellow-500">Register</a>
-                    <p><i class="ri-user-add-line text-3xl text-white"></i></p>
-                </div>
+                <a href="/login"><i class="ri-login-box-line icon"></i> Login</a>
+                <a href="/register"><i class="ri-user-add-line icon"></i> Register</a>
             @endif
         </div>
-
-        <!-- Mobile Menu Button -->
-        <button id="mobile-btn" class="md:hidden text-white ml-6 pt-2 hover:text-gray-300">
-            <i class="ri-menu-fill text-2xl"></i>
-        </button>
     </div>
-
-    <!-- Content Section -->
-    <div>
-        @yield('content')
-    </div>
+    
+    @yield('content')
 
 </body>
 </html>

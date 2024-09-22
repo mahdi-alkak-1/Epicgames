@@ -45,6 +45,7 @@ class PostsController extends Controller
             'description' => 'nullable|string',
             'price' => 'nullable|numeric',
             'image' => 'required|image|max:2048',
+            
         ]);
         
         // Handle image upload
@@ -60,6 +61,7 @@ class PostsController extends Controller
             'description' => $validatedData['description'] ?? null,
             'price' => $validatedData['price'] ?? null,
             'image' => $newImageName,
+            
         ]);
     
         return redirect()->route('store.index')->with('success', 'Post created successfully');

@@ -77,7 +77,7 @@
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="submit-btn">Edit Post</button>
+            <button type="submit" class="submit-btn">Update Post</button>
 
             <!-- Validation Error Messages -->
             @if ($errors->any())
